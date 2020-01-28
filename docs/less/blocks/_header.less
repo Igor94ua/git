@@ -1,0 +1,456 @@
+.header {
+    width: 100%;
+    padding-top: 35px;
+    overflow: hidden;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        padding-top: 40px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding-top: 60px;
+    }
+}
+
+.block-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        flex-direction: row;
+        margin-bottom: 80px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        align-items: center;
+        margin-bottom: 150px;
+    }
+}
+
+.column-reverse {
+    flex-direction: column-reverse;
+
+       //Медиа запрос для планшетов и выше
+       @media (min-width: 768px) {
+        flex-direction: row;       
+    }
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.icons-link a {
+
+    cursor: pointer;
+    color: #000;
+
+    &:hover,
+    &:active {
+        color: #039be5;
+    }
+}
+
+#icon-github-color {
+
+    &:hover,
+    &:active {
+        color: #039be5;
+    }
+}
+
+.initials {
+    width: 80px;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.2;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        font-size: 52px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 42px;
+        transform: translateX(-100%);
+    }
+}
+
+.initials span {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 12px;
+        background-color: #fbdc4d;
+        bottom: 12px;
+        transform: translate(-100%, 50%);
+    }
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 12px;
+            background-color: #fbdc4d;
+            bottom: 12px;
+            transform: translate(0, 0);
+        }
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 12px;
+            background-color: #fbdc4d;
+            bottom: 12px;
+            transform: translate(-100%, 50%);
+        }
+    }
+}
+
+.initials a {
+    color: #000000;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        color: #039be5;
+    }
+}
+
+.div-links {
+    display: none;
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+.div-links a {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.4s ease-out, border 0.4s ease-in;
+
+    &:hover {
+        color: #039be5;
+        border-bottom: 2px solid #fbdc4d;
+    }
+
+}
+
+#fa-3x {
+    font-size: 40px;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        font-size: 56px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 68px;
+    }
+}
+
+.icons-link {
+    display: none;
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        display: block;
+        transform: translateX(+100%);
+        flex-direction: row;
+        display: flex;
+    }
+}
+
+.icons {
+    margin-right: 20px;
+
+    &:first-child {
+        margin-left: 15px;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.nav-links {
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        margin-right: 55px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-right: 80px;
+    }
+}
+
+.width-50 {
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        width: 50%;
+    }
+}
+
+.email {
+
+    &:hover {
+        color: #039be5;
+    }
+}
+
+.name {
+    margin-right: 0;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        margin-right: 50px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-right: 120px;
+    }
+
+}
+
+.title-header {
+    margin: 0;
+    font-weight: 800;
+    line-height: 1.2;
+    font-size: 42px;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        font-size: 52px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 90px;
+    }
+
+}
+
+.title-header span {
+    position: relative;
+    z-index: 1;
+
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 12px;
+            background-color: #fbdc4d;
+            bottom: 2px;
+            transform: translate(-100%, -100%);
+        }
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 12px;
+            background-color: #fbdc4d;
+            bottom: 12px;
+            transform: translate(-100%, -100%);
+        }
+    }
+
+}
+
+.header_desc {
+    font-size: 18px;
+    line-height: 1.667;
+    color: rgb(57, 63, 71);
+    font-weight: 500;
+    text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 0.004);
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 24px;
+        line-height: 1.5;
+    }
+
+}
+
+.button-submit {
+    display: none;
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        display: block;
+        padding: 20px 40px;
+        font-size: 22px;
+        color: rgb(0, 0, 0);
+        font-weight: 700;
+        line-height: 1.2;
+        border-radius: 30px;
+        background-color: rgb(251, 220, 77);
+        border: none;
+        margin-right: 30px;
+        transition: background-color 0.4s ease, color 0.4s ease;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            outline: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: rgb(251, 220, 77);
+        }
+    }
+
+}
+
+.button-contacts {
+    display: none;
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        display: block;
+        padding: 16px 40px;
+        font-size: 22px;
+        color: rgb(70, 70, 70);
+        font-weight: 700;
+        line-height: 1.2;
+        border-width: 4px;
+        border-radius: 30px;
+        border-color: rgb(70, 70, 70);
+        border-style: solid;
+        background-color: rgb(255, 255, 255);
+        transition: background-color 0.4s ease, color 0.4s ease;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            outline: none;
+            background-color: rgb(70, 70, 70);
+            color: rgb(255, 255, 255);
+        }
+    }
+}
+
+.image-header {
+    margin-top: 0px;
+    width: 150%;
+    height: 100%;
+    margin-left: -93px;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        width: 100%;
+        height: 100%;
+        margin-left: 0px;
+        font-size: 52px;
+        margin-top: -90px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        object-fit: none;
+        margin-top: -150px;
+    }
+}
+
+.photo {
+    position: relative;
+    z-index: 0;
+    margin: 0 auto;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        &::after {
+            content: "";
+            background-image: linear-gradient(90deg, rgb(244, 248, 249) 0%, rgba(244, 248, 249, 0) 100%);
+            opacity: 0.502;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 390px;
+            height: 250px;
+            transform: translate(34%, 37%);
+            z-index: -1;
+        }
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        &::after {
+            content: "";
+            background-image: linear-gradient(90deg, rgb(244, 248, 249) 0%, rgba(244, 248, 249, 0) 100%);
+            opacity: 0.502;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 457px;
+            height: 410px;
+            transform: translate(34%, 37%);
+            z-index: -1;
+        }
+    }
+
+}
+
+.Photo-img {
+    z-index: 2;
+    width: 290px;
+    height: 290px;
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        width: auto;
+        height: auto;
+    }
+}
+
+.header-button {
+    display: flex;
+    align-items: center;
+}

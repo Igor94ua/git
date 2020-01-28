@@ -1,0 +1,74 @@
+.footer {
+    padding: 40px 0;
+    background-color: #333333;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        padding: 45px 0;
+    }
+    
+//Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding: 28px 0;
+    } 
+}
+
+.copywrite p {
+    margin: 0;
+    font-size: 16px;
+    color: #b0b0b0;
+    line-height: 1.2;
+    margin-bottom: 12px;
+
+    &:first-child {
+        color: rgb(255, 255, 255);
+        margin-bottom: 24px;
+    }
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        font-size: 16px;
+    }
+    
+//Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 18px;
+    } 
+}
+
+.copywrite a {
+    color: #6d6d6d;
+}
+
+.navigation-dots {    
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    position: fixed;
+    width: 40px;
+    height: 120px;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+   
+}
+
+.navigation-dots a {
+    cursor: pointer;
+}
+
+.a {    
+    display: flex;    
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #73b7ce;    
+
+    &:first-child {
+        margin-top: 15px;
+    }
+
+    &:hover {
+        background-color: #ff746d; 
+    }
+}

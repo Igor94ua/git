@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #000000;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+.conteiner {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        padding-left: 0;
+        padding-right: 0;
+        width: 708px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        width: 1140px;
+    }
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+span,
+div,
+button,
+img,
+input {
+    &::selection {
+        background: rgb(251, 220, 77);
+    }
+}
