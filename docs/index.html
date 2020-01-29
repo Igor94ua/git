@@ -13,9 +13,24 @@
     <title>Document</title>
 </head>
 
-<body>
+<body>    
+        <ul id="page-nav" class="nav-ul">
+            <li class="active">
+                <a href="#header"></a>
+            </li>
+            <li>
+                <a href="#portfolio"></a>
+            </li>
+            <li>
+                <a href="#how_i_work"></a>
+            </li>
+            <li>
+                <a href="#contacts"></a>
+            </li>
+        </ul>
+   
     <div class="overlay_menu"></div>
-    <header class="header">
+    <header class="header" id="header">
         <div class="conteiner">
             <div class="block-row nav space-between">
                 <div class="initials"><a href="#"><span>СИ</span></a></div>
@@ -115,17 +130,17 @@
                         <span class="underline">Портфолио</span>
                     </h2>
                     <div class="div-links portfolio-nav">
-                        <a href="#" class="nav-links button" id="add-class" data-filter="all">Все работы</a>
-                        <a href="#" class="nav-links button" id="add-class" data-filter="bootstrap">Bootstrap</a>
-                        <a href="#" class="nav-links button" id="add-class" data-filter="wordpress">WordPress</a>
-                        <a href="#" class="nav-links button" id="add-class" data-filter="frontend">Frontend</a>
+                        <a href="#!" class="nav-links button filter" id="add-class" data-filter="all">Все работы</a>
+                        <a href="#!" class="nav-links button filter" id="add-class" data-filter=".bootstrap">Bootstrap</a>
+                        <a href="#!" class="nav-links button filter" id="add-class" data-filter=".wordpress">WordPress</a>
+                        <a href="#!" class="nav-links button filter" id="add-class" data-filter=".frontend">Frontend</a>
                     </div>
-                    <div class="block-row wrap mb-0 unset">
+                    <div class="block-row wrap mb-0 unset" id="portfolio-filter">
 
                         <div class="project-link">
                             <div class="overlay">
                                 <img src="./img/Portfolio/discover.jpg" alt="discover" class="img-portfolio">
-                                <a href="#" class="project-link-active elem">
+                                <a href="#" class="project-link-active">
                                     <i class="far fa-eye fa-3x eye-icon"></i>
                                 </a>
                             </div>
@@ -136,7 +151,7 @@
                         <div class="project-link">
                             <div class="overlay">
                                 <img src="./img/Portfolio/iMac-Mockup.jpg" alt="Imac" class="img-portfolio">
-                                <a href="#" class="project-link-active elem">
+                                <a href="#" class="project-link-active">
                                     <i class="far fa-eye fa-3x eye-icon"></i>
                                 </a>
                             </div>
@@ -144,10 +159,10 @@
                             <p>Верстка лендинга</p>
                         </div>
 
-                        <div class="project-link">
+                        <div class="project-link mix bootstrap">
                             <div class="overlay">
                                 <img src="./img/Portfolio/01.jpg" alt="madcap" class="img-portfolio">
-                                <a href="#" class="project-link-active bootstrap elem">
+                                <a href="#" class="project-link-active">
                                     <i class="far fa-eye fa-3x eye-icon"></i>
                                 </a>
                             </div>
@@ -155,10 +170,10 @@
                             <p>Верстка многостраничного сайта</p>
                         </div>
 
-                        <div class="project-link">
+                        <div class="project-link mix wordpress">
                             <div class="overlay">
                                 <img src="./img/Portfolio/02.jpg" alt="phone" class="img-portfolio">
-                                <a href="#" class="project-link-active wordpress elem">
+                                <a href="#" class="project-link-active ">
                                     <i class="far fa-eye fa-3x eye-icon"></i>
                                 </a>
                             </div>
@@ -166,15 +181,15 @@
                             <p>Верстка многостраничного сайта</p>
                         </div>
 
-                        <div class="project-link">
+                        <div class="project-link mix frontend">
                             <div class="overlay">
                                 <img src="./img/Portfolio/03.jpg" alt="orange" class="img-portfolio">
-                                <a href="#" class="project-link-active frontend elem">
+                                <a href="#" class="project-link-active ">
                                     <i class="far fa-eye fa-3x eye-icon"></i>
                                 </a>
-                            </div>
+                            </div>                            
                             <h4 class="title-small">Верстка "Мир Авто"</h4>
-                            <p>Верстка многостраничного сайта</p>
+                            <p>Верстка многостраничного сайта</p>                            
                         </div>
 
                     </div>
@@ -288,18 +303,7 @@
                                         <li class="bold">Адрес</li>
                                         <li class="data">Украина, Киев</li>
                                     </ul>
-                                </div>
-                                <!-- <div>
-                                    <ul class="right-list">
-                                        <li class="list-links"><a href="mailto:sukachov94@gmail.com"
-                                                class="contacts-links">sukachov94@gmail.com</a></li>
-                                        <li class="list-links"><a href="skype:igor.sukachov"
-                                                class="contacts-links">igor.sukachov</a></li>
-                                        <li class="data"><a href="tel:+38 (066) 999-99-99" class="contacts-links">+38
-                                                (066) 999-99-99</a></li>
-                                        <li class="data">Украина, Киев</li>
-                                    </ul>
-                                </div> -->
+                                </div>                                
                             </div>
                             <div class="icons-links-section">
                                 <a href="#"><i class="fab fa-github icons fa-3x link-hover"
@@ -320,21 +324,27 @@
                         </div>
 
                         <div class="section-contacts-right">
+                            <form class="contacts-form" action="" id="contact-form">
+                            <input type="hidden" name="project_name " value=" myportfolio.ru">
+							<input type="hidden" name="admin_email " value="lareta1@yandex.ru">
+							<input type="hidden" name="email_from " value="info@myportfolio.ru ">
                             <div class="input_wrapper">
-                                <input id="email-input" class="input" type="text" required>
+                                <input id="email-input" class="input" type="email" name="email" required>
                                 <label for="email-input" class="fake-placeholder">Введите Email</label>
                             </div>
 
                             <div class="input_wrapper">
-                                <input id="topic-input" class="input" type="text" required>
+                                <input id="topic-input" class="input" type="text" name="theme" required>
                                 <label for="topic-input" class="fake-placeholder">Тема письма</label>
                             </div>
                             <div class="textarea_wrapper">
-                                <textarea id="message" cols="32" rows="5" class="textarea" type="text"
-                                    required></textarea>
+                                <textarea id="message" cols="32" rows="5" class="textarea" type="text" name="message"
+                                    required ></textarea>
                                 <label for="message" class="fake-placeholder">Сообщение</label>
                             </div>
                             <button class="button-submit-contacts">Отправить</button>
+                            </form>
+                            <div id="answer"></div>
                         </div>
                     </div>
                 </div>
@@ -351,14 +361,11 @@
             </div>
         </div>
     </footer>
-    <div class="navigation-dots" id="menu">
-        <a href="#what_i_do"><span class="a"></span></a>
-        <a href="#portfolio"><span class="a"></span></a>
-        <a href="#how_i_work"><span class="a"></span></a>
-        <a href="#contacts"><span class="a"></span></a>
-    </div>
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./libs/nav.js/nav.js"></script>
+    <script src="./libs/mixitup2/jquery.mixitup.min.js"></script>
+    <script src="./libs/jquery.validate/jquery.validate.js"></script>
 </body>
 
 </html>
