@@ -530,14 +530,14 @@ input::selection {
 }
 @media (min-width: 768px) {
   .img-portfolio {
-    width: 330px;
-    height: auto;
+    width: auto;
+    height: 166px;
   }
 }
 @media (min-width: 1200px) {
   .img-portfolio {
     width: auto;
-    height: auto;
+    height: 269px;
   }
 }
 .wrap {
