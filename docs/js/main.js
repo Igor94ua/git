@@ -93,4 +93,43 @@ $(document).ready(function () {
       // Чтобы по Submit больше ничего не выполнялось - делаем возврат false чтобы прервать цепочку срабатывания остальных функций
       return false;
   }
+  
 });
+
+$(document).ready(function () {
+  $('#backTop').hide();
+  $(window).scroll( function () {
+
+    if($(this).scrollTop() > 200){
+      $('#backTop').fadeIn();
+    }
+    else{
+      $('#backTop').fadeOut();
+    }
+  })
+
+});
+
+    //-PLACEHOLDER
+    const formRows = document.querySelectorAll('.input_wrapper')
+    const formRowsInputs = document.querySelectorAll('.input')
+
+    for (let i = 0; i < formRows.length; i++) {
+
+        formRows[i].addEventListener('click', function () {
+            const placeholderElement = this.querySelector('.fake-placeholder')
+            placeholderElement.classList.add('active')
+        })
+
+    }
+
+    for (let i = 0; i < formRowsInputs.length; i++) {
+        formRowsInputs[i].addEventListener('blur', function () {
+
+            const thisParent = this.parentElement;
+
+            if (this.value == '') {
+                thisParent.querySelector('span').classList.remove('active');
+            }
+        })
+    }
