@@ -340,6 +340,7 @@ input::selection {
     border: none;
     margin-right: 30px;
     transition: background-color 0.4s ease, color 0.4s ease;
+    text-decoration: none;
     cursor: pointer;
   }
   .button-submit:hover,
@@ -366,6 +367,7 @@ input::selection {
     border-style: solid;
     background-color: #ffffff;
     transition: background-color 0.4s ease, color 0.4s ease;
+    text-decoration: none;
     cursor: pointer;
   }
   .button-contacts:hover,
@@ -521,6 +523,7 @@ input::selection {
     transform: translate(-100%, -100%);
   }
   .underline:hover::after {
+    transition: 0.9s linear;
     background-color: rgba(234, 115, 109, 0.85);
   }
 }
@@ -850,6 +853,7 @@ input::selection {
     transform: translate(-100%, -100%);
   }
   .very-small-title span:hover::after {
+    transition: 0.5s linear;
     background-color: rgba(3, 154, 229, 0.5);
   }
 }
@@ -1155,13 +1159,19 @@ input::selection {
   margin-bottom: 70px;
 }
 .fake-placeholder {
-  color: #bcbcbc;
   position: absolute;
-  top: 2px;
-  left: 0;
-  transition: 0.2s ease;
+  left: 5px;
+  top: 5px;
+  color: #bcbcbc;
+  pointer-events: none;
+  transition: .5s ease;
   font-size: 20px;
   font-weight: 700;
+}
+.fake-placeholder.active {
+  font-size: 16px;
+  color: #ed9626;
+  top: -25px;
 }
 .input {
   border: none;
@@ -1179,6 +1189,12 @@ input::selection {
 }
 .input:focus {
   border-bottom: 1px solid #ea736d;
+}
+.input:invalid {
+  color: #ea736d;
+}
+.input:valid {
+  color: #039be5;
 }
 .input:focus + .fake-placeholder,
 .input:valid + .fake-placeholder {
@@ -1213,6 +1229,9 @@ input::selection {
   top: -25px;
   color: #ed9626;
   font-size: 16px;
+}
+.textarea:valid {
+  color: #039be5;
 }
 .contacts-links {
   text-decoration: none;
@@ -1316,6 +1335,10 @@ input::selection {
 }
 .copywrite a {
   color: #6d6d6d;
+  transition: .5s;
+}
+.copywrite a:hover {
+  color: #fff;
 }
 #page-nav li {
   width: 12px;
@@ -1325,7 +1348,12 @@ input::selection {
   background-color: #73b7ce;
   margin-bottom: 15px;
   transition: .5s;
-  display: flex;
+  display: none;
+}
+@media (min-width: 1200px) {
+  #page-nav li {
+    display: flex;
+  }
 }
 #page-nav li a {
   display: block;

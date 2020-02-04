@@ -216,15 +216,22 @@
     margin-bottom: 70px;
   }
   
-.fake-placeholder {
-    color: #bcbcbc;
+  .fake-placeholder {
     position: absolute;
-    top: 2px;
-    left: 0;
-    transition: 0.2s ease;
+    left: 5px;
+    top: 5px;
+    color: #bcbcbc;
+    pointer-events: none;
+    transition: .5s ease;
     font-size: 20px;
     font-weight: 700;
-}
+  }
+  
+  .fake-placeholder.active {
+    font-size: 16px;
+    color: #ed9626;
+    top: -25px;
+  }
   
 .input {
     color: #bcbcbc;
@@ -243,6 +250,14 @@
 
     &:focus {
         border-bottom: 1px solid #ea736d;
+    }
+
+    &:invalid {
+        color: #ea736d;
+    }
+
+    &:valid {
+        color: #039be5;
     }
     
     &:focus + .fake-placeholder,
@@ -284,6 +299,10 @@
     color: #ed9626;
     font-size: 16px;    
     } 
+
+    &:valid {
+        color: #039be5;
+    }
 }
 
 .contacts-links {    

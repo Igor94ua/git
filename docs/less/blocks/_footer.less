@@ -38,6 +38,11 @@
 
 .copywrite a {
     color: #6d6d6d;
+    transition: .5s;
+
+    &:hover {
+        color: #fff;
+    }
 }
 
 // .navigation-dots {    
@@ -81,7 +86,14 @@
     background-color: #73b7ce;    
     margin-bottom: 15px;
     transition: .5s;
-    display: flex;
+    display: none;
+
+    //Медиа запрос для планшетов и выше
+        @media (min-width: 1200px) {
+            display: flex;
+    }
+        
+ 
 }
 
 #page-nav li a {

@@ -129,7 +129,7 @@ $(document).ready(function () {
             const thisParent = this.parentElement;
 
             if (this.value == '') {
-                thisParent.querySelector('span').classList.remove('active');
+                thisParent.querySelector('label').classList.remove('active');
             }
         })
     }
