@@ -93,10 +93,7 @@ input::selection {
 }
 .icons-link a:hover,
 .icons-link a:active {
-  color: #039be5;
-}
-#icon-github-color:hover,
-#icon-github-color:active {
+  transition: .5s linear;
   color: #039be5;
 }
 .initials {
@@ -160,6 +157,7 @@ input::selection {
   text-decoration: none;
 }
 .initials a:hover {
+  transition: .5s linear;
   color: #039be5;
 }
 .div-links {
@@ -963,6 +961,33 @@ input::selection {
     flex-direction: row-reverse;
   }
 }
+.link-myWorks {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .link-myWorks {
+    display: block;
+    width: 274px;
+    padding: 20px 40px;
+    font-size: 22px;
+    color: #000000;
+    font-weight: 700;
+    line-height: 1.2;
+    border-radius: 30px;
+    background-color: #fbdc4d;
+    border: none;
+    margin-right: 30px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .link-myWorks:hover,
+  .link-myWorks:focus {
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fbdc4d;
+  }
+}
 .contacts {
   padding: 60px 0;
   background-color: #f4f8f9;
@@ -1053,7 +1078,7 @@ input::selection {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.2;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 .list-row li:last-child {
   padding-bottom: 0;
@@ -1063,6 +1088,7 @@ input::selection {
     font-size: 20px;
     margin-right: 55px;
     margin-left: 49px;
+    padding-bottom: 30px;
   }
   .list-row li:nth-child(odd) {
     margin-left: 0;
@@ -1134,6 +1160,7 @@ input::selection {
   cursor: pointer;
 }
 .link-hover:hover {
+  transition: .2s linear;
   color: #fbdc4d;
 }
 .section-contacts-right {
@@ -1611,6 +1638,9 @@ input::selection {
 }
 .icons-links {
   margin-top: 35px;
+}
+.fa-github {
+  color: #000;
 }
 .fa-facebook {
   color: #3b5998;

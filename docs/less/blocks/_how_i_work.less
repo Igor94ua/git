@@ -252,3 +252,33 @@
         flex-direction: row-reverse;
     }
 }
+
+.link-myWorks {
+    display: none;
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        display: block;
+        width: 274px;
+        padding: 20px 40px;
+        font-size: 22px;
+        color: rgb(0, 0, 0);
+        font-weight: 700;
+        line-height: 1.2;
+        border-radius: 30px;
+        background-color: rgb(251, 220, 77);
+        border: none;
+        margin-right: 30px;
+        transition: background-color 0.4s ease, color 0.4s ease;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            outline: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: rgb(251, 220, 77);
+        }
+    }
+
+}
