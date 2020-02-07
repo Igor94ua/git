@@ -108,7 +108,7 @@
 }
 
 #page-nav {
-    display: flex;
+    display: none;
     position: fixed;
     padding-left: 0;
     top: 50%;       
@@ -116,6 +116,11 @@
     flex-direction: column;
     right: 35px;
     z-index: 10;
+
+    //Медиа запрос для планшетов и выше
+        @media (min-width: 1200px) {
+            display: flex;
+    }
 }
 
 .mix {
@@ -134,4 +139,14 @@
     bottom: 40px;
     font-size: 54px;
     color: #4bff4b;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 1200px) {
+        display: none;
+}
+}
+
+.line_bg {
+    background-image: url(../../img/bg_line.jpg);
+    background-repeat: repeat-y;
 }

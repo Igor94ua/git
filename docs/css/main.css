@@ -1392,7 +1392,7 @@ input::selection {
   background-color: #ff746d;
 }
 #page-nav {
-  display: flex;
+  display: none;
   position: fixed;
   padding-left: 0;
   top: 50%;
@@ -1400,6 +1400,11 @@ input::selection {
   flex-direction: column;
   right: 35px;
   z-index: 10;
+}
+@media (min-width: 1200px) {
+  #page-nav {
+    display: flex;
+  }
 }
 .mix {
   display: none;
@@ -1415,6 +1420,15 @@ input::selection {
   bottom: 40px;
   font-size: 54px;
   color: #4bff4b;
+}
+@media (min-width: 1200px) {
+  #backTop a {
+    display: none;
+  }
+}
+.line_bg {
+  background-image: url(../../img/bg_line.jpg);
+  background-repeat: repeat-y;
 }
 .menu-icon-wrapper {
   width: 29px;
