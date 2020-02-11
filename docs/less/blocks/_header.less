@@ -11,6 +11,13 @@
     //Медиа запрос для десктопов
     @media (min-width: 1200px) {
         padding-top: 60px;
+        max-width: 1600px;
+        background-image: url(../img/bg_line.jpg);
+        background-repeat: repeat-y;
+        background-position: center;
+        background-size: auto;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
@@ -79,7 +86,10 @@
 
     //Медиа запрос для десктопов
     @media (min-width: 1200px) {
-        font-size: 42px;
+        font-size: 42px;       
+    }
+
+    @media (min-width: 1366px) {       
         transform: translateX(-100%);
     }
 }
@@ -196,10 +206,13 @@
 
     //Медиа запрос для десктопов
     @media (min-width: 1200px) {
-        display: block;
-        transform: translateX(+100%);
+        display: block;       
         flex-direction: row;
         display: flex;
+    }
+
+    @media (min-width: 1366px) {       
+        transform: translateX(+100%);
     }
 }
 
